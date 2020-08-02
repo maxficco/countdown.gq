@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="wrapper">
+  <head>
+    <title>Countdown.GQ</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.clocktab.com/logo.hash_e002a36d3cec1cf076515e58d6847415.svg"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    
+    <div style="display:none; position:fixed; background:white; width:800px; height:450px; left:23%;bottom:100px; border-radius:20px;" id="frame">
+      <center>
+        <h1>
+          Your saved timer info:
+        </h1>
+
+        <textarea
+          style="width:300px; height:200px; font-size:15px; font-family:monospace; text-align:;"
+          id="textarea"
+          readonly
+        ></textarea>
+        <br /><br />
+        <button
+          class="button"
+          onclick="document.getElementById('frame').style.display = 'none'"
+        >
+          Close
+        </button>
+        <p></p>
+        <button class="button" onclick="copy()">Copy Text!</button>
+      </center>
+    </div>
+    
+    <div id="container">
+      <p id="days" onclick="colorswap1()"></p>
+      <p id="hours" onclick="colorswap2()"></p>
+      <p id="minutes" onclick="colorswap3()"></p>
+      <p id="seconds" onclick="colorswap4()"></p>
+      <p id="extra"></p>
+    </div>
+    <br />
+    <br />
+    <div id="container2">
+      <p id="countdownTitle">Until 2021</p>
+    </div>
+    <center>
+      <br /><br /><br />
+      <hr />
+      <br /><br />
+      <button onclick="change()" id="buttonAnimations1">Edit timer</button>
+      <div id="edit1234" style="display:none">
+        <div id="line1">
+          <p>What should we call your timer? <input type="text" id="1one" style="border-radius:5px;" /></p>
+        </div>
+        <div id="line2">
+          <p>
+            What text should be displayed when your timer is finished?
+            <input type="text" id="2two" style="border-radius:5px;" />
+          </p>
+        </div>
+        <div id="line3">
+          <p>
+            When should your timer count down to?
+            <input type="date" id="3three" style="border-radius:5px;" />
+          </p>
+        </div>
+        <div id="line4">
+          <p>What time? <input type="time" id="4four" style="border-radius:5px;" /></p>
+        </div>
+        <button
+          style="font-size:14px !important;"
+          onclick="goFunc()"
+          class="button"
+        >
+          Go!
+        </button>
+        <br />
+        <br />
+        <button
+          style="font-size:14px !important;"
+          onclick="fullscreen()"
+          class="button"
+        >
+          Fullscreen
+        </button>
+      </div>
+      <br /><br /><br />
+      <button id="buttonAnimations2" onclick="Share()">
+        Share your timer!
+      </button>
+    </center>
+  </body>
+</html>
