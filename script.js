@@ -3,7 +3,7 @@ var frame = document.getElementById("frame");
 var time;
 var hour;
 
-let futureDate = new Date("Jan 1, 2021, 00:00:00").getTime();
+let futureDate = new Date("Jan 1, 2022, 00:00:00").getTime();
 
 let end = "Happy New Year!";
 
